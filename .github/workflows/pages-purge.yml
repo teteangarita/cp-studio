@@ -1,51 +1,24 @@
-name: Purge Cloudflare Cache after Push
+name: Deploy and Purge Cloudflare Pages after Push
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  purge-cache:
-    name: Purge Cloudflare Cache
+  deploy:
+    name: Deploy to Cloudflare Pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Wait for Cloudflare Pages deployment ready
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CF_PROJECT_NAME: ${{ secrets.CF_PROJECT_NAME }}
-        run: |
-          set -e
-          if [[ -z "$CF_API_TOKEN" || -z "$CF_ACCOUNT_ID" || -z "$CF_PROJECT_NAME" ]]; then
-            echo "Missing required secrets: CF_API_TOKEN, CF_ACCOUNT_ID, CF_PROJECT_NAME"
-            exit 1
-          fi
-
-          echo "Polling Cloudflare Pages deployment for project: $CF_PROJECT_NAME"
-          for i in $(seq 1 40); do
-            response=$(curl -s -H "Authorization: Bearer $CF_API_TOKEN" \
-              -H "Content-Type: application/json" \
-              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}/deployments?order=created_at&direction=desc&per_page=1")
-
-            status=$(echo "$response" | python3 -c 'import json,sys; d=json.load(sys.stdin); r=d.get("result") or []; print(r[0].get("latest_stage", {}).get("status", "") if r else "")')
-            echo "Deployment status: $status"
-
-            if [[ "$status" == "ready" ]]; then
-              echo "Deployment ready"
-              exit 0
-            fi
-            if [[ "$status" == "failed" ]]; then
-              echo "Deployment failed"
-              exit 1
-            fi
-            sleep 15
-          done
-
-          echo "Timeout waiting for Cloudflare Pages deployment to become ready"
-          exit 1
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: ${{ secrets.CF_PROJECT_NAME }}
+          directory: './'
 
       - name: Purge Cloudflare cache
         if: ${{ secrets.CF_API_TOKEN && secrets.CF_ZONE_ID }}

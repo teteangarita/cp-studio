@@ -75,23 +75,26 @@ Notas finales
 - Mantén consistencia en `og:*` y meta tags entre `index.html` y `brandbook.html` (ya sincronizados).
 - Si necesitas, puedo preparar un workflow de GitHub Actions que automáticamente purgue la caché tras `push` a `main`.
  
-GitHub Actions: purgar caché automáticamente
------------------------------------------
+GitHub Actions: despliegue directo a Cloudflare Pages y purga de caché
+--------------------------------------------------------------------
 
-He incluido un workflow de ejemplo en `.github/workflows/pages-purge.yml` que se ejecuta en cada `push` a la rama `main`. El workflow espera 30 segundos y ejecuta la purga de caché de Cloudflare usando la API.
+He incluido un workflow en `.github/workflows/pages-purge.yml` que se ejecuta en cada `push` a la rama `main`. El workflow despliega el sitio directamente a Cloudflare Pages usando `cloudflare/pages-action@v1` y luego purga la caché de Cloudflare.
 
 Configura estos secretos en tu repositorio de GitHub (Repository > Settings > Secrets & variables > Actions > New repository secret):
 
-- `CF_API_TOKEN` — Token de Cloudflare con permiso `Zone.Cache Purge`.
+- `CF_API_TOKEN` — Token de Cloudflare con permiso `Zone.Cache Purge` y acceso a Pages.
+- `CF_ACCOUNT_ID` — ID de tu cuenta de Cloudflare.
+- `CF_PROJECT_NAME` — Nombre del proyecto Pages en Cloudflare.
 - `CF_ZONE_ID` — ID de la zona DNS donde está tu dominio (lo encuentras en Cloudflare Dashboard > Overview > Zone ID).
 
 Notas sobre el workflow:
-- Cloudflare Pages realiza el despliegue automáticamente cuando conectas el repositorio a Pages; este workflow solo purga la caché para asegurarse de que los cambios se sirvan inmediatamente.
-- Si tu proyecto necesita un build step, el workflow actual asume que Pages hace el build. Podemos adaptar el workflow para realizar el build y desplegar usando la API si prefieres no conectar Pages directamente.
+- El workflow despliega el sitio desde la rama `main` y desde el directorio raíz `./`.
+- Después del despliegue, purga la caché de la zona con `purge_everything`.
+- Si deseas que el workflow solo purgue recursos específicos, puedo adaptar el paso de caché.
 
 Ejecutar manualmente desde tu máquina (alternativa)
 ------------------------------------------------
-Si prefieres no usar GitHub Actions, tras hacer `git push` puedes ejecutar localmente el script de purga:
+Si prefieres purgar manualmente tras un push, usa:
 
 ```bash
 export CF_ZONE_ID=xxxx
@@ -99,4 +102,4 @@ export CF_API_TOKEN=xxxx
 ./scripts/purge_cache.sh
 ```
 
-Si quieres, configuro el workflow para esperar hasta que el despliegue de Pages esté `ready` usando la API de Pages, y luego purgar solo los recursos necesarios en vez de `purge_everything`.
+Si quieres, también preparo un `CNAME` válido para tu dominio personalizado y un workflow para actualizarlo automáticamente.
