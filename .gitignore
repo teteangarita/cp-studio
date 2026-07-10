@@ -15,3 +15,9 @@ Thumbs.db
 *.log
 tmp/
 temp/
+
+# Local virtual environments and build artifacts
+.venv/
+.venv-1/
+cp-studio.zip
+
