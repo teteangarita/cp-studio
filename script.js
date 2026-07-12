@@ -316,33 +316,55 @@ document.addEventListener('DOMContentLoaded', () => {
   // 12. Contact Form Interactive Handler
   const contactForm = document.getElementById('consult-contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
+      const formEndpoint = 'https://formsubmit.co/ajax/carmen.perdomo@cpstudio.cl';
       
       // Visual Submitting State
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> Enviando...';
       submitBtn.style.opacity = '0.8';
       
-      // Simulate API dispatch (e.g. backend notification / CRM integration)
-      setTimeout(() => {
-        // Restore Button
+      try {
+        const serviceSelect = document.getElementById('service');
+        const selectedService = serviceSelect?.selectedOptions?.[0]?.text || 'Sin especificar';
+        const payload = {
+          name: document.getElementById('name')?.value?.trim() || '',
+          email: document.getElementById('email')?.value?.trim() || '',
+          service: selectedService,
+          message: document.getElementById('message')?.value?.trim() || '',
+          _subject: `Nuevo contacto CP Studio - ${selectedService}`,
+          _template: 'table',
+          _captcha: 'false'
+        };
+
+        const response = await fetch(formEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error('No se pudo enviar el mensaje');
+        }
+
+        showToast('¡Mensaje enviado con éxito! Te responderemos a la brevedad.');
+        contactForm.reset();
+        createSparkles(submitBtn);
+      } catch (error) {
+        console.error('Contact form submission failed:', error);
+        showToast('No se pudo enviar el mensaje. Por favor, escríbenos directamente a carmen.perdomo@cpstudio.cl');
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         submitBtn.style.opacity = '';
-        
-        // Dynamic success alert injection
-        showToast('¡Propuesta de Consulta enviada con éxito! Te contactaremos hoy mismo.');
-        
-        // Reset fields
-        contactForm.reset();
-        
-        // Sparkle particles effect on successful reservation (Bespoke UX!)
-        createSparkles(submitBtn);
-      }, 1500);
+      }
     });
   }
   
