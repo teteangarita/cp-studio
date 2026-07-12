@@ -331,23 +331,15 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const serviceSelect = document.getElementById('service');
         const selectedService = serviceSelect?.selectedOptions?.[0]?.text || 'Sin especificar';
-        const payload = {
-          name: document.getElementById('name')?.value?.trim() || '',
-          email: document.getElementById('email')?.value?.trim() || '',
-          service: selectedService,
-          message: document.getElementById('message')?.value?.trim() || '',
-          _subject: `Nuevo contacto CP Studio - ${selectedService}`,
-          _template: 'table',
-          _captcha: 'false'
-        };
+        const formData = new FormData(contactForm);
+        formData.set('_subject', `Nuevo contacto CP Studio - ${selectedService}`);
+        formData.set('_template', 'table');
+        formData.set('_captcha', 'false');
+        formData.set('_next', 'https://cpstudio.cl');
 
         const response = await fetch(formEndpoint, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(payload)
+          body: formData
         });
 
         if (!response.ok) {

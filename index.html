@@ -495,7 +495,11 @@
             Completa tus datos y nos pondremos en contacto contigo en menos de 24 horas hábiles.
           </p>
           
-          <form id="consult-contact-form" class="contact-form">
+          <form id="consult-contact-form" class="contact-form" action="https://formsubmit.co/ajax/carmen.perdomo@cpstudio.cl" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo contacto CP Studio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://cpstudio.cl">
             <div class="form-group">
               <label for="name">Nombre Completo</label>
               <input type="text" id="name" name="name" class="form-control" placeholder="Ej. Carmen Perdomo" required>
