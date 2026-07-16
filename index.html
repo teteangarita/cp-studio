@@ -63,10 +63,7 @@
         <button id="theme-toggle" class="btn-icon" aria-label="Cambiar Tema" style="margin-right: 0.5rem;">
           <i class="ri-moon-line"></i>
         </button>
-        <a href="brandbook.html" class="btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: var(--radius-sm); margin-right: 0.5rem;">
-          <i class="ri-book-open-line"></i> Manual de Marca
-        </a>
-        <a href="#contact" class="btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm);">
+<a href="#contact" class="btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-radius: var(--radius-sm);">
           Agendar Consulta
         </a>
       </div>
@@ -212,10 +209,13 @@
         <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
         <button class="filter-btn" data-filter="database">Bases de Datos</button>
         <button class="filter-btn" data-filter="software">Software a Medida</button>
+        <button class="filter-btn" data-filter="web">Sitios Web</button>
       </div>
       
       <!-- Portfolio Grid -->
       <div class="portfolio-grid">
+
+        <!-- Card 1: SVO Ambiental -->
         <div class="portfolio-card" data-category="software">
           <div class="portfolio-img-box">
             <div class="portfolio-img-box-glow"></div>
@@ -231,7 +231,6 @@
             <p>
               Desarrollo de herramientas y procesos digitales para fortalecer la gestión operativa y la trazabilidad de proyectos ambientales con enfoque técnico y funcional.
             </p>
-            
             <div class="portfolio-metrics-brief">
               <div class="metric-brief-item">
                 <span class="metric-brief-val">+35%</span>
@@ -242,12 +241,236 @@
                 <span class="metric-brief-label">Trazabilidad</span>
               </div>
             </div>
-            
             <button class="portfolio-btn" data-project="modal-svo">
               Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
             </button>
           </div>
         </div>
+
+        <!-- Card 2: Psico Ingenia -->
+        <div class="portfolio-card" data-category="web">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="psico-ingenia.png" alt="Psico Ingenia" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Salud &amp; Bienestar</span>
+              <span class="portfolio-tag">Sitio Web</span>
+              <span class="portfolio-tag">Agendamiento</span>
+            </div>
+            <h3>Psico Ingenia</h3>
+            <p>
+              Diseño y desarrollo de sitio web profesional para servicios de psicología. Plataforma con sistema de agendamiento, identidad visual y presencia digital de alto impacto.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">100%</span>
+                <span class="metric-brief-label">Responsivo</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">+60%</span>
+                <span class="metric-brief-label">Visibilidad</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-psico">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Desarrollo Frontend Moderno (SPA) -->
+        <div class="portfolio-card" data-category="web">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="frontend-moderno.png" alt="Desarrollo Frontend Moderno (SPA)" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Frontend</span>
+              <span class="portfolio-tag">React / Angular</span>
+              <span class="portfolio-tag">UX / UI</span>
+            </div>
+            <h3>Desarrollo Frontend Moderno (SPA)</h3>
+            <p>
+              Construcción de interfaces web modernas, dinámicas y responsivas para sitios y aplicaciones empresariales de alta gama.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">100%</span>
+                <span class="metric-brief-label">Responsivo</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">&lt;1.5s</span>
+                <span class="metric-brief-label">Carga</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-frontend-spa">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Desarrollo Full Stack con Python -->
+        <div class="portfolio-card" data-category="software">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="python-fullstack.png" alt="Desarrollo Full Stack con Python" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Python / Django</span>
+              <span class="portfolio-tag">Full Stack</span>
+              <span class="portfolio-tag">Linux / Nginx</span>
+            </div>
+            <h3>Desarrollo Full Stack con Python</h3>
+            <p>
+              Aplicaciones web completas de extremo a extremo, incluyendo backend robusto, bases de datos optimizadas y despliegue en servidor.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">99.9%</span>
+                <span class="metric-brief-label">Uptime</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">GCP / AWS</span>
+                <span class="metric-brief-label">Servidor</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-python-fullstack">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Sistemas ERP y de Gestión a Medida -->
+        <div class="portfolio-card" data-category="software">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="erp-gestion.png" alt="Sistemas ERP y de Gestión a Medida" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">ERP</span>
+              <span class="portfolio-tag">Gestión Interna</span>
+              <span class="portfolio-tag">Automatización</span>
+            </div>
+            <h3>Sistemas ERP y de Gestión a Medida</h3>
+            <p>
+              Desarrollo de sistemas a medida para digitalizar y automatizar procesos internos de empresas: gestión, monitoreo e inventario.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">+45%</span>
+                <span class="metric-brief-label">Productividad</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">100%</span>
+                <span class="metric-brief-label">Digitalizado</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-erp-medida">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Personalización de Software Open Source -->
+        <div class="portfolio-card" data-category="software">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="software-opensource.png" alt="Personalización de Software Open Source" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Odoo / Moodle</span>
+              <span class="portfolio-tag">WordPress</span>
+              <span class="portfolio-tag">Customización</span>
+            </div>
+            <h3>Personalización de Software Open Source</h3>
+            <p>
+              Implementación, adaptación y migración de plataformas de código abierto según las necesidades del cliente, con mejoras visuales y funcionales.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">A Medida</span>
+                <span class="metric-brief-label">Diseño</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">Seguro</span>
+                <span class="metric-brief-label">Entorno</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-software-opensource">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 7: Automatización y Web Scraping -->
+        <div class="portfolio-card" data-category="software">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="automatizacion-scraping.png" alt="Automatización y Web Scraping" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Web Scraping</span>
+              <span class="portfolio-tag">Python</span>
+              <span class="portfolio-tag">Automatización</span>
+            </div>
+            <h3>Automatización y Web Scraping</h3>
+            <p>
+              Desarrollo de módulos y procesos automáticos para la extracción, recolección y procesamiento inteligente de datos desde fuentes web.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">10x</span>
+                <span class="metric-brief-label">Más Rápido</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">99.9%</span>
+                <span class="metric-brief-label">Precisión</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-automatizacion-scraping">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 8: Consultoría en Gestión de Proyectos TI -->
+        <div class="portfolio-card" data-category="software">
+          <div class="portfolio-img-box">
+            <div class="portfolio-img-box-glow"></div>
+            <img src="gestion-proyectos.png" alt="Consultoría en Gestión de Proyectos TI" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Scrum / Agile</span>
+              <span class="portfolio-tag">Liderazgo</span>
+              <span class="portfolio-tag">Gestión TI</span>
+            </div>
+            <h3>Consultoría en Gestión de Proyectos TI</h3>
+            <p>
+              Dirección técnica y gestión de proyectos bajo metodologías ágiles, ideal para liderar equipos técnicos sin contratar personal a tiempo completo.
+            </p>
+            <div class="portfolio-metrics-brief">
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">Scrum</span>
+                <span class="metric-brief-label">Metodología</span>
+              </div>
+              <div class="metric-brief-item">
+                <span class="metric-brief-val">Senior</span>
+                <span class="metric-brief-label">Liderazgo</span>
+              </div>
+            </div>
+            <button class="portfolio-btn" data-project="modal-gestion-proyectos">
+              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -578,33 +801,37 @@
     </div>
   </div>
 
-  <!-- Modal 4: Psicoingenia -->
-  <div id="modal-health" class="project-modal">    <div class="project-modal-content">
+  <!-- Modal: Psico Ingenia -->
+  <div id="modal-psico" class="project-modal">
+    <div class="project-modal-content">
       <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
       
-      <div class="project-modal-hero" style="background: linear-gradient(135deg, #251f1c 0%, rgba(var(--color-primary-rgb), 0.2) 100%);">
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #2d1f4f 0%, rgba(124, 92, 191, 0.4) 100%);">
         <div class="project-modal-hero-overlay"></div>
-        <h2 class="project-modal-hero-title">Optimización de Bases de Datos</h2>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="psico-ingenia.png" alt="Logo Psico Ingenia" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Psico Ingenia — Sitio Web Profesional</h2>
+        </div>
       </div>
       
       <div class="project-modal-body">
         <div class="project-modal-grid">
           <div class="project-modal-desc">
-            <h4>El Desafío Técnico</h4>
+            <h4>El Desafío</h4>
             <p>
-              El sistema presentaba cuellos de botella en consultas críticas, tiempos de respuesta altos y una carga innecesaria en los servidores durante los periodos de mayor demanda.
+              Psico Ingenia necesitaba una presencia digital profesional que reflejara la calidez y seriedad de sus servicios de psicología, facilitando el agendamiento de citas y la comunicación con sus pacientes.
             </p>
             
             <h4>Nuestra Solución</h4>
             <p>
-              Realizamos una revisión técnica completa del motor de base de datos, ajustamos consultas, reorganizamos índices y mejoramos la arquitectura de lectura/escritura para lograr mayor estabilidad y rendimiento.
+              Diseñamos y desarrollamos un sitio web completo con identidad visual personalizada, sistema de agendamiento en línea integrado con Calendly, sección de servicios, formulario de contacto y notificaciones automáticas para la profesional y sus pacientes.
             </p>
             
             <div class="project-testimonial">
               <p class="project-testimonial-quote">
-                "El cambio en el rendimiento fue evidente desde el primer ciclo de optimización."
+                "El sitio web nos dio una presencia digital real y profesional. Ahora nuestros pacientes pueden agendar fácilmente y reciben confirmaciones automáticas."
               </p>
-              <p class="project-testimonial-author">— Equipo de Producto</p>
+              <p class="project-testimonial-author">— Equipo Psico Ingenia</p>
             </div>
           </div>
           
@@ -612,20 +839,20 @@
             <div class="sidebar-box">
               <h4>Métricas del Caso</h4>
               <ul>
-                <li><span>Velocidad de Consultas</span><span>5x más rápida</span></li>
-                <li><span>Carga CPU</span><span>-60%</span></li>
-                <li><span>Estabilidad</span><span>Mejorada</span></li>
+                <li><span>Diseño Responsivo</span><span>100%</span></li>
+                <li><span>Visibilidad Digital</span><span>+60%</span></li>
+                <li><span>Agendamiento Online</span><span>Automatizado</span></li>
               </ul>
             </div>
             
             <div>
               <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
               <div class="tech-tags-grid">
-                <span class="portfolio-tag">PostgreSQL</span>
-                <span class="portfolio-tag">AWS Aurora</span>
-                <span class="portfolio-tag">PGBouncer</span>
-                <span class="portfolio-tag">Redis</span>
-                <span class="portfolio-tag">SQL Tuning</span>
+                <span class="portfolio-tag">HTML5 / CSS3</span>
+                <span class="portfolio-tag">JavaScript</span>
+                <span class="portfolio-tag">Calendly</span>
+                <span class="portfolio-tag">Google Maps</span>
+                <span class="portfolio-tag">FormSubmit</span>
               </div>
             </div>
           </div>
@@ -634,55 +861,328 @@
     </div>
   </div>
 
-  <!-- Modal 4: Retail S.A. -->
-  <div id="modal-retail" class="project-modal">
+  </div>
+
+  <!-- Modal 6: Desarrollo Frontend Moderno (SPA) -->
+  <div id="modal-frontend-spa" class="project-modal">
     <div class="project-modal-content">
       <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
-      
-      <div class="project-modal-hero" style="background: linear-gradient(135deg, #251f1c 0%, rgba(var(--color-secondary-rgb), 0.2) 100%);">
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #b07050 0%, #5f7470 100%);">
         <div class="project-modal-hero-overlay"></div>
-        <h2 class="project-modal-hero-title">Seguridad y Hardening de Sistemas</h2>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="frontend-moderno.png" alt="Frontend Moderno" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Desarrollo Frontend Moderno (SPA)</h2>
+        </div>
       </div>
-      
       <div class="project-modal-body">
         <div class="project-modal-grid">
           <div class="project-modal-desc">
             <h4>El Desafío Técnico</h4>
             <p>
-              El negocio necesitaba fortalecer sus capas de seguridad sin comprometer velocidad, usabilidad ni continuidad operativa frente a crecientes amenazas digitales.
+              El cliente necesitaba migrar su antigua aplicación web monolítica a una Single Page Application (SPA) para mejorar la velocidad, reactividad y la experiencia de usuario general sin perder posicionamiento SEO.
             </p>
-            
             <h4>Nuestra Solución</h4>
             <p>
-              Implementamos controles de seguridad, protección de APIs, políticas de acceso y prácticas DevSecOps para reducir riesgos y preparar el entorno para una operación más segura y escalable.
+              Construimos una arquitectura desacoplada utilizando React y Redux Toolkit, optimizando el ciclo de vida del frontend. Diseñamos componentes interactivos y reutilizables con transiciones fluidas, integrando APIs mediante hooks personalizados y garantizando compatibilidad responsiva al 100%.
             </p>
-            
             <div class="project-testimonial">
               <p class="project-testimonial-quote">
-                "La seguridad dejó de ser un obstáculo y se convirtió en una base sólida para crecer."
+                "La velocidad de carga y la fluidez de la nueva interfaz frontend transformaron por completo la percepción de nuestro producto."
               </p>
-              <p class="project-testimonial-author">— Equipo de Seguridad</p>
+              <p class="project-testimonial-author">— Director de Producto</p>
             </div>
           </div>
-          
           <div class="project-modal-sidebar">
             <div class="sidebar-box">
               <h4>Métricas del Caso</h4>
               <ul>
-                <li><span>Riesgo Expuesto</span><span>Reducido</span></li>
-                <li><span>Auditoría</span><span>100% Completada</span></li>
-                <li><span>Incidentes Críticos</span><span>Cero</span></li>
+                <li><span>Diseño Responsivo</span><span>100%</span></li>
+                <li><span>Velocidad de Carga</span><span>&lt;1.5s</span></li>
+                <li><span>Tasa de Rebote</span><span>-25%</span></li>
               </ul>
             </div>
-            
             <div>
               <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
               <div class="tech-tags-grid">
-                <span class="portfolio-tag">AWS WAF</span>
-                <span class="portfolio-tag">Pen-Testing</span>
-                <span class="portfolio-tag">SSL Hardening</span>
-                <span class="portfolio-tag">SonarQube</span>
-                <span class="portfolio-tag">DevSecOps</span>
+                <span class="portfolio-tag">React</span>
+                <span class="portfolio-tag">Redux</span>
+                <span class="portfolio-tag">Angular</span>
+                <span class="portfolio-tag">AngularJS</span>
+                <span class="portfolio-tag">jQuery</span>
+                <span class="portfolio-tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7: Desarrollo Full Stack con Python -->
+  <div id="modal-python-fullstack" class="project-modal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #b07050 0%, #8c5336 100%);">
+        <div class="project-modal-hero-overlay"></div>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="python-fullstack.png" alt="Python Fullstack" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Desarrollo Full Stack con Python</h2>
+        </div>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-grid">
+          <div class="project-modal-desc">
+            <h4>El Desafío Técnico</h4>
+            <p>
+              Startup en crecimiento necesitaba una plataforma web escalable desde cero para conectar a sus usuarios, procesar datos y automatizar su lógica de negocio sin fallos bajo alta carga.
+            </p>
+            <h4>Nuestra Solución</h4>
+            <p>
+              Diseñamos e implementamos una plataforma de extremo a extremo usando Python y Django. Estructuramos bases de datos relacionales optimizadas (PostgreSQL/MySQL), desarrollamos servicios REST eficientes y desplegamos la solución en servidores Linux virtualizados con Apache2 y Nginx sobre Google Cloud Platform.
+            </p>
+            <div class="project-testimonial">
+              <p class="project-testimonial-quote">
+                "La solidez del backend en Python y la configuración del servidor nos permitieron escalar a miles de usuarios activos sin una sola caída."
+              </p>
+              <p class="project-testimonial-author">— CTO Startup</p>
+            </div>
+          </div>
+          <div class="project-modal-sidebar">
+            <div class="sidebar-box">
+              <h4>Métricas del Caso</h4>
+              <ul>
+                <li><span>Uptime</span><span>99.9%</span></li>
+                <li><span>Capacidad Servidor</span><span>+1500 req/s</span></li>
+                <li><span>Tiempo Respuesta</span><span>&lt;100ms</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
+              <div class="tech-tags-grid">
+                <span class="portfolio-tag">Python</span>
+                <span class="portfolio-tag">Django</span>
+                <span class="portfolio-tag">PostgreSQL</span>
+                <span class="portfolio-tag">MySQL</span>
+                <span class="portfolio-tag">Linux</span>
+                <span class="portfolio-tag">Nginx</span>
+                <span class="portfolio-tag">GCP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 8: Sistemas ERP y de Gestión a Medida -->
+  <div id="modal-erp-medida" class="project-modal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #5f7470 0%, #8c5336 100%);">
+        <div class="project-modal-hero-overlay"></div>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="erp-gestion.png" alt="ERP Gestión" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Sistemas ERP y de Gestión a Medida</h2>
+        </div>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-grid">
+          <div class="project-modal-desc">
+            <h4>El Desafío</h4>
+            <p>
+              Una organización logística operaba con procesos manuales dispersos en hojas de cálculo, lo que causaba demoras críticas, pérdida de trazabilidad de inventarios y errores humanos recurrentes.
+            </p>
+            <h4>Nuestra Solución</h4>
+            <p>
+              Desarrollamos un sistema ERP a la medida usando Python/Django y PostgreSQL. Diseñamos módulos integrados de gestión, monitoreo de flotas en tiempo real, control de stock automatizado y reportes dinámicos basados en arquitecturas orientadas a servicios.
+            </p>
+            <div class="project-testimonial">
+              <p class="project-testimonial-quote">
+                "Digitalizar e integrar todo en un ERP personalizado eliminó los errores de inventario y aceleró el despacho diario significativamente."
+              </p>
+              <p class="project-testimonial-author">— Gerente de Operaciones</p>
+            </div>
+          </div>
+          <div class="project-modal-sidebar">
+            <div class="sidebar-box">
+              <h4>Métricas del Caso</h4>
+              <ul>
+                <li><span>Productividad</span><span>+45%</span></li>
+                <li><span>Trazabilidad</span><span>100%</span></li>
+                <li><span>Digitalización</span><span>100%</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
+              <div class="tech-tags-grid">
+                <span class="portfolio-tag">Python</span>
+                <span class="portfolio-tag">Django</span>
+                <span class="portfolio-tag">PostgreSQL</span>
+                <span class="portfolio-tag">SOA</span>
+                <span class="portfolio-tag">Dashboards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 9: Personalización de Software Open Source -->
+  <div id="modal-software-opensource" class="project-modal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #b07050 0%, #5f7470 100%);">
+        <div class="project-modal-hero-overlay"></div>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="software-opensource.png" alt="Software Open Source" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Personalización de Software Open Source</h2>
+        </div>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-grid">
+          <div class="project-modal-desc">
+            <h4>El Desafío</h4>
+            <p>
+              El cliente quería implementar una solución robusta de soporte técnico, e-commerce y gestión empresarial sin el costo prohibitivo del software propietario de licencia cerrada.
+            </p>
+            <h4>Nuestra Solución</h4>
+            <p>
+              Adaptamos, migramos e integramos plataformas líderes open source (OSticket, WordPress, PrestaShop, Odoo, Moodle y Dolibarr). Optimizamos el código fuente de las plantillas para mejorar la estética, integramos pasarelas de pago y configuramos flujos lógicos personalizados.
+            </p>
+            <div class="project-testimonial">
+              <p class="project-testimonial-quote">
+                "La flexibilidad de adaptar plataformas open source a nuestras reglas exactas de negocio nos ahorró miles de dólares en licencias."
+              </p>
+              <p class="project-testimonial-author">— Director de Finanzas</p>
+            </div>
+          </div>
+          <div class="project-modal-sidebar">
+            <div class="sidebar-box">
+              <h4>Métricas del Caso</h4>
+              <ul>
+                <li><span>Ahorro Licencias</span><span>~70%</span></li>
+                <li><span>Tiempo Lanzamiento</span><span>Reducido</span></li>
+                <li><span>Interfaz</span><span>Personalizada</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
+              <div class="tech-tags-grid">
+                <span class="portfolio-tag">OSticket</span>
+                <span class="portfolio-tag">WordPress</span>
+                <span class="portfolio-tag">PrestaShop</span>
+                <span class="portfolio-tag">Odoo</span>
+                <span class="portfolio-tag">Moodle</span>
+                <span class="portfolio-tag">Dolibarr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 10: Automatización y Web Scraping -->
+  <div id="modal-automatizacion-scraping" class="project-modal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #251f1c 0%, #b07050 100%);">
+        <div class="project-modal-hero-overlay"></div>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="automatizacion-scraping.png" alt="Automatización y Scraping" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Automatización y Web Scraping</h2>
+        </div>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-grid">
+          <div class="project-modal-desc">
+            <h4>El Desafío</h4>
+            <p>
+              Una empresa de análisis de mercado necesitaba recopilar diariamente miles de precios y datos estructurados de competidores web, una tarea que les tomaba horas de trabajo manual propenso a errores.
+            </p>
+            <h4>Nuestra Solución</h4>
+            <p>
+              Desarrollamos scripts y procesos automáticos de extracción inteligente de datos (Web Scraping) con Python. Diseñamos pipelines que limpian, validan y estructuran la información directamente en una base de datos segura de forma programada.
+            </p>
+            <div class="project-testimonial">
+              <p class="project-testimonial-quote">
+                "Los scripts de scraping extraen toda la información del mercado de forma autónoma cada noche, ahorrándonos incontables horas."
+              </p>
+              <p class="project-testimonial-author">— Jefe de Análisis</p>
+            </div>
+          </div>
+          <div class="project-modal-sidebar">
+            <div class="sidebar-box">
+              <h4>Métricas del Caso</h4>
+              <ul>
+                <li><span>Aceleración</span><span>10x más rápido</span></li>
+                <li><span>Precisión de Datos</span><span>99.9%</span></li>
+                <li><span>Automatización</span><span>Completa</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
+              <div class="tech-tags-grid">
+                <span class="portfolio-tag">Python</span>
+                <span class="portfolio-tag">Scraping</span>
+                <span class="portfolio-tag">BeautifulSoup</span>
+                <span class="portfolio-tag">Selenium</span>
+                <span class="portfolio-tag">Pandas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 11: Consultoría en Gestión de Proyectos TI -->
+  <div id="modal-gestion-proyectos" class="project-modal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #5f7470 0%, #b07050 100%);">
+        <div class="project-modal-hero-overlay"></div>
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="gestion-proyectos.png" alt="Gestión Proyectos TI" style="height: 80px; object-fit: contain; border-radius: 12px; background: white; padding: 8px;">
+          <h2 class="project-modal-hero-title" style="margin: 0;">Consultoría en Gestión de Proyectos TI</h2>
+        </div>
+      </div>
+      <div class="project-modal-body">
+        <div class="project-modal-grid">
+          <div class="project-modal-desc">
+            <h4>El Desafío</h4>
+            <p>
+              Empresa corporativa con un equipo de desarrollo junior sufría retrasos constantes en los entregables debido a la falta de liderazgo técnico senior y desorganización en las tareas.
+            </p>
+            <h4>Nuestra Solución</h4>
+            <p>
+              Brindamos dirección técnica externa y consultoría en metodologías ágiles. Implementamos marcos Scrum, estructuramos sprints de entrega continua, optimizamos la comunicación del equipo y lideramos los flujos de trabajo hasta estabilizar las entregas.
+            </p>
+            <div class="project-testimonial">
+              <p class="project-testimonial-quote">
+                "El liderazgo técnico y la estructura ágil que Carmen introdujo en el equipo destrabó el proyecto y nos devolvió la previsibilidad."
+              </p>
+              <p class="project-testimonial-author">— Director General</p>
+            </div>
+          </div>
+          <div class="project-modal-sidebar">
+            <div class="sidebar-box">
+              <h4>Métricas del Caso</h4>
+              <ul>
+                <li><span>Entregas a tiempo</span><span>+85%</span></li>
+                <li><span>Eficiencia Equipo</span><span>+40%</span></li>
+                <li><span>Metodología</span><span>Scrum / Agile</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
+              <div class="tech-tags-grid">
+                <span class="portfolio-tag">Scrum</span>
+                <span class="portfolio-tag">Agile</span>
+                <span class="portfolio-tag">Management</span>
+                <span class="portfolio-tag">Liderazgo</span>
+                <span class="portfolio-tag">Planificación</span>
               </div>
             </div>
           </div>
@@ -729,7 +1229,6 @@
             <li><a href="#portfolio">Casos de Éxito</a></li>
             <li><a href="#methodology">Metodología</a></li>
             <li><a href="#testimonials">Testimonios</a></li>
-            <li><a href="brandbook.html">Manual de Identidad de Marca</a></li>
           </ul>
         </div>
       </div>
