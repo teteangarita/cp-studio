@@ -1,0 +1,68 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+<style>
+  .crm-app { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1b2a; color: #e6edf3; padding: 32px; border-radius: 12px; }
+  .crm-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+  .crm-title { font-size: 20px; font-weight: 700; color: #fff; }
+  .crm-title span { color: #35c6b0; }
+  .crm-sub { color: #8ea3b8; font-size: 13px; margin-top: 2px; }
+  .crm-search { background: #16273a; border: 1px solid #24384d; color: #fff; padding: 9px 14px; border-radius: 8px; width: 240px; font-size: 13px; outline: none; }
+  .crm-search:focus { border-color: #35c6b0; }
+  table { width: 100%; border-collapse: collapse; background: #16273a; border-radius: 10px; overflow: hidden; }
+  th { text-align: left; padding: 12px 16px; background: #1c3044; color: #8ea3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; user-select: none; }
+  th:hover { color: #35c6b0; }
+  td { padding: 12px 16px; border-top: 1px solid #1f3347; font-size: 13.5px; }
+  tr:hover td { background: #1a2c40; }
+  .badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-activo { background: rgba(53,198,176,0.15); color: #35c6b0; }
+  .badge-pendiente { background: rgba(232,163,61,0.15); color: #e8a33d; }
+  .badge-inactivo { background: rgba(148,163,184,0.15); color: #94a3b8; }
+  .empty { text-align: center; padding: 30px; color: #64748b; font-size: 13px; }
+  .foot { margin-top: 14px; color: #64748b; font-size: 12px; }
+</style>
+
+<div ng-app="crmApp" ng-controller="ClientesCtrl" class="crm-app">
+  <div class="crm-header">
+    <div>
+      <div class="crm-title">Panel CRM <span>· Gestión de Clientes</span></div>
+      <div class="crm-sub">Ejemplo construido con AngularJS — filtrado y ordenamiento en vivo</div>
+    </div>
+    <input type="text" class="crm-search" ng-model="busqueda" placeholder="Buscar cliente...">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th ng-click="ordenarPor('nombre')">Cliente</th>
+        <th ng-click="ordenarPor('empresa')">Empresa</th>
+        <th ng-click="ordenarPor('proyecto')">Proyecto</th>
+        <th ng-click="ordenarPor('estado')">Estado</th>
+        <th ng-click="ordenarPor('valor')">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="c in clientes | filter:busqueda | orderBy:orden">
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.empresa }}</td>
+        <td>{{ c.proyecto }}</td>
+        <td><span class="badge" ng-class="'badge-' + c.estado">{{ c.estado }}</span></td>
+        <td>${{ c.valor | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="empty" ng-if="(clientes | filter:busqueda).length === 0">No se encontraron clientes.</div>
+  <div class="foot">{{ (clientes | filter:busqueda).length }} clientes · Click en un encabezado para ordenar</div>
+</div>
+
+<script>
+  angular.module('crmApp', []).controller('ClientesCtrl', function ($scope) {
+    $scope.orden = 'nombre';
+    $scope.ordenarPor = function (campo) { $scope.orden = campo; };
+    $scope.clientes = [
+      { nombre: 'María Fuentes', empresa: 'Constructora Delsur', proyecto: 'Sistema de inventario', estado: 'activo', valor: 1850000 },
+      { nombre: 'Jorge Salinas', empresa: 'Distribuidora Andes', proyecto: 'Portal de pedidos', estado: 'pendiente', valor: 920000 },
+      { nombre: 'Carla Muñoz', empresa: 'Clínica Vitalis', proyecto: 'Agenda de pacientes', estado: 'activo', valor: 1400000 },
+      { nombre: 'Pedro Ríos', empresa: 'Import Rios Ltda.', proyecto: 'Migración a la nube', estado: 'inactivo', valor: 680000 },
+      { nombre: 'Daniela Contreras', empresa: 'EduTech SPA', proyecto: 'Plataforma e-learning', estado: 'activo', valor: 2300000 }
+    ];
+  });
+</script>
