@@ -36,6 +36,60 @@
   <meta name="twitter:title" content="CP Studio — Consultoría de Servicios TI &amp; Arquitectura Cloud">
   <meta name="twitter:description" content="Consultoría boutique de alta gama en servicios TI y arquitectura en la nube.">
   <meta name="twitter:image" content="logo.jpeg">
+
+  <!-- Schema.org Structured Data for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CP Studio",
+    "description": "Consultoría boutique de alta gama en servicios TI y arquitectura en la nube liderada por Carmen Perdomo.",
+    "url": "https://cpstudio.cl",
+    "logo": "https://cpstudio.cl/logo.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Pedro de la Paz",
+      "addressRegion": "Concepción",
+      "addressCountry": "Chile"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios TI",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Arquitectura Cloud & DevOps"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bases de Datos & Alta Carga"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo de Software a la Medida"
+          }
+        }
+      ]
+    },
+    "workExample": [
+      {
+        "@type": "CreativeWork",
+        "name": "SVO Ambiental - Sitio Web Corporativo",
+        "url": "https://svoambiental.cl/",
+        "image": "https://cpstudio.cl/logo-svo-nuevo.png",
+        "description": "Diseño y desarrollo de sitio web corporativo de alta gama para firma de derecho ambiental en Chile con sistema de blog y agendamiento online."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -216,34 +270,40 @@
       <div class="portfolio-grid">
 
         <!-- Card 1: SVO Ambiental -->
-        <div class="portfolio-card" data-category="software">
-          <div class="portfolio-img-box">
+        <div class="portfolio-card" data-category="web">
+          <div class="portfolio-img-box" style="background: linear-gradient(135deg, rgba(45, 106, 79, 0.15) 0%, rgba(37, 31, 28, 0.1) 100%);">
             <div class="portfolio-img-box-glow"></div>
-            <img src="svo-ambiental.png" alt="SVO Ambiental" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm);">
+            <img src="logo-svo-nuevo.png" alt="Logo Nuevo SVO Ambiental" style="max-width: 85%; max-height: 80%; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15)); border-radius: var(--radius-sm); background: rgba(255,255,255,0.9); padding: 10px;">
           </div>
           <div class="portfolio-info">
             <div class="portfolio-tags">
-              <span class="portfolio-tag">Medio Ambiente</span>
-              <span class="portfolio-tag">Software</span>
-              <span class="portfolio-tag">Operación</span>
+              <span class="portfolio-tag" style="background: rgba(45, 106, 79, 0.15); color: #2d6a4f;">Derecho Ambiental</span>
+              <span class="portfolio-tag">Sitio Web</span>
+              <span class="portfolio-tag">SEIA / SMA</span>
+              <span class="portfolio-tag">Blog &amp; Admin</span>
             </div>
             <h3>SVO Ambiental</h3>
             <p>
-              Desarrollo de herramientas y procesos digitales para fortalecer la gestión operativa y la trazabilidad de proyectos ambientales con enfoque técnico y funcional.
+              Diseño y desarrollo de sitio web corporativo de alta gama para firma de derecho ambiental en Chile. Plataforma responsiva con catálogo de servicios por sectores, sistema de publicación de blog y agendamiento en línea.
             </p>
             <div class="portfolio-metrics-brief">
               <div class="metric-brief-item">
-                <span class="metric-brief-val">+35%</span>
-                <span class="metric-brief-label">Eficiencia</span>
+                <span class="metric-brief-val">svoambiental.cl</span>
+                <span class="metric-brief-label">Sitio Web Oficial</span>
               </div>
               <div class="metric-brief-item">
-                <span class="metric-brief-val">100%</span>
-                <span class="metric-brief-label">Trazabilidad</span>
+                <span class="metric-brief-val">&lt; 1.0s</span>
+                <span class="metric-brief-label">Tiempo de Carga</span>
               </div>
             </div>
-            <button class="portfolio-btn" data-project="modal-svo">
-              Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
-            </button>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; flex-wrap: wrap;">
+              <a href="https://svoambiental.cl/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 0.55rem 1.1rem; background: var(--color-primary); color: #ffffff; border-radius: var(--radius-sm); font-weight: 600; text-decoration: none; font-size: 0.85rem; box-shadow: var(--shadow-sm); transition: all var(--transition-fast);">
+                <i class="ri-global-line"></i> Visitar Sitio Web
+              </a>
+              <button class="portfolio-btn" data-project="modal-svo" style="margin-top: 0;">
+                Ver Caso de Éxito <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -760,49 +820,74 @@
     <div class="project-modal-content">
       <button class="project-modal-close" aria-label="Cerrar"><i class="ri-close-line"></i></button>
       
-      <div class="project-modal-hero" style="background: linear-gradient(135deg, #251f1c 0%, rgba(var(--color-primary-rgb), 0.2) 100%);">
+      <div class="project-modal-hero" style="background: linear-gradient(135deg, #1b382b 0%, #2d6a4f 100%);">
         <div class="project-modal-hero-overlay"></div>
-        <h2 class="project-modal-hero-title">SVO Ambiental</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; position: relative; z-index: 2; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            <img src="logo-svo-nuevo.png" alt="Logo Nuevo SVO Ambiental" style="height: 80px; object-fit: contain; border-radius: 12px; background: #ffffff; padding: 10px; box-shadow: var(--shadow-md);">
+            <div>
+              <h2 class="project-modal-hero-title" style="margin: 0; font-size: 2.2rem;">SVO Ambiental — Sitio Web Corporativo</h2>
+              <span style="color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; font-weight: 500; display: block; margin-top: 4px;">Abogado Ambiental Estratégico &amp; Consultoría Legal en Chile</span>
+            </div>
+          </div>
+          <a href="https://svoambiental.cl/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #ffffff; color: #1b382b; border: none; padding: 0.75rem 1.4rem; border-radius: var(--radius-md); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-md);">
+            <i class="ri-external-link-line" style="font-size: 1.1rem; color: #2d6a4f;"></i> Visitar Sitio Web (svoambiental.cl)
+          </a>
+        </div>
       </div>
       
       <div class="project-modal-body">
         <div class="project-modal-grid">
           <div class="project-modal-desc">
-            <h4>El Desafío</h4>
+            <h4>El Desafío Técnico &amp; Digital</h4>
             <p>
-              SVO Ambiental necesitaba una herramienta digital que facilitara la gestión operativa, la trazabilidad de procesos y la organización de información clave para sus equipos y proyectos.
+              SVO Ambiental, firma liderada por el abogado y magíster Sebastián Vásquez Olcese, requería una presencia digital estratégica de alta gama que comunicara su propuesta de valor única: la fusión de la litigación especializada en Tribunales Ambientales, el cumplimiento regulatorio (SEIA y SMA) y la trayectoria académica universitaria.
             </p>
             
-            <h4>Nuestra Solución</h4>
-            <p>
-              Diseñamos y desarrollamos una solución funcional orientada a la operación diaria, con foco en usabilidad, estructura de datos y seguimiento de actividades. El resultado fue una plataforma más ordenada, más ágil y más útil para el trabajo diario.
-            </p>
+            <h4>Características Principales del Desarrollo</h4>
+            <ul style="margin-left: 1.2rem; margin-bottom: 1.5rem; color: var(--color-dark-muted); display: flex; flex-direction: column; gap: 0.7rem; line-height: 1.5;">
+              <li><strong>Plataforma Web Corporativa Premium:</strong> Arquitectura moderna desarrollada con HTML5 semántico, CSS3 Vanilla y JS responsivo. Diseño elegante con tipografía corporativa y paleta de tonos tierra y verde ambiental.</li>
+              <li><strong>Sistema de Gestión &amp; Publicación de Blog:</strong> Módulo de administración (`admin.html`) con backend Node.js que permite al equipo crear, editar y publicar de manera ágil análisis jurídicos y artículos sobre jurisprudencia ambiental.</li>
+              <li><strong>Catálogo Interactivo de Servicios:</strong> Secciones organizadas mediante pestañas dinámicas para Asesoría a Empresas (SEIA, SMA, Permisos), Servicios Corporativos (RCA, ISO 14001 Express) y Asesoría a Personas.</li>
+              <li><strong>Canales de Conversión Directa:</strong> Integración de agendamiento de reuniones ejecutivas mediante Calendly, contacto rápido vía WhatsApp y notificaciones institucionales.</li>
+              <li><strong>SEO &amp; Rendimiento de Alta Eficiencia:</strong> Optimizado para motores de búsqueda, con etiquetas Open Graph avanzadas y velocidad de carga ultrarrápida (< 1.0s).</li>
+            </ul>
             
             <div class="project-testimonial">
               <p class="project-testimonial-quote">
-                "El proyecto permitió organizar mejor la operación y dar mayor claridad a los procesos del día a día."
+                "El sitio web logró transmitir a la perfección nuestro posicionamiento como abogados ambientales estratégicos, combinando rigor jurídico y accesibilidad digital para nuestros clientes."
               </p>
-              <p class="project-testimonial-author">— Equipo SVO Ambiental</p>
+              <p class="project-testimonial-author">— Equipo SVO Ambiental (svoambiental.cl)</p>
+            </div>
+            
+            <div style="margin-top: 1.8rem;">
+              <a href="https://svoambiental.cl/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 0.85rem 1.8rem; font-size: 1rem; border-radius: var(--radius-md);">
+                <i class="ri-global-line"></i> Explorar la página web svoambiental.cl <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
           </div>
           
           <div class="project-modal-sidebar">
             <div class="sidebar-box">
-              <h4>Métricas del Caso</h4>
+              <h4>Métricas &amp; Datos del Caso</h4>
               <ul>
-                <li><span>Eficiencia Operativa</span><span>+35%</span></li>
-                <li><span>Trazabilidad</span><span>100%</span></li>
-                <li><span>Organización de Procesos</span><span>Mejorada</span></li>
+                <li><span>Página Web</span><a href="https://svoambiental.cl/" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">svoambiental.cl</a></li>
+                <li><span>Tiempo de Carga</span><span>&lt; 1.0s</span></li>
+                <li><span>Diseño Responsivo</span><span>100% Adaptativo</span></li>
+                <li><span>Módulo de Blog</span><span>Automatizado</span></li>
+                <li><span>Cobertura</span><span>Chile (Concepción, Valdivia, Temuco, Puerto Montt)</span></li>
               </ul>
             </div>
             
             <div>
               <h4 style="margin-bottom: 0.8rem;">Tecnologías Utilizadas</h4>
               <div class="tech-tags-grid">
-                <span class="portfolio-tag">Software a Medida</span>
-                <span class="portfolio-tag">Dashboards</span>
-                <span class="portfolio-tag">Procesos Digitales</span>
-                <span class="portfolio-tag">Trazabilidad</span>
+                <span class="portfolio-tag">HTML5 / CSS3 Vanilla</span>
+                <span class="portfolio-tag">JavaScript ES6+</span>
+                <span class="portfolio-tag">Node.js / Express</span>
+                <span class="portfolio-tag">Netlify / GitHub Pages</span>
+                <span class="portfolio-tag">Calendly API</span>
+                <span class="portfolio-tag">SEO &amp; OpenGraph</span>
               </div>
             </div>
           </div>
@@ -869,8 +954,6 @@
         </div>
       </div>
     </div>
-  </div>
-
   </div>
 
   <!-- Modal 6: Desarrollo Frontend Moderno (SPA) -->
